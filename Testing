@@ -1,0 +1,83 @@
+#Uniendo los dos programas de la evidencia III en un solo programa
+# Inicializamos la variable de la opción elegida por el usuario
+opcion = ""
+
+# Creamos un bucle while que se ejecutará hasta que el usuario elija la opción "salir"
+while opcion != "salir":
+
+    # Mostramos el menú de opciones
+    print("Bienvenido al menú de opciones:")
+    print("1. Imprimir el nombre del mes a partir del número ingresado")
+    print("2. Imprimir los primeros 10 números de la serie de Fibonacci")
+    print("3. Salir del programa")
+
+    # Pedimos al usuario que ingrese una opción
+    opcion = input("Ingrese una opción: ")
+
+    # Si el usuario elige la opción 1, ejecutamos el código correspondiente y mostramos el nombre del mes
+    if opcion == "1":
+        print("Ha seleccionado la opción 1")
+        print ("Ingrese el número del mes")
+        Num_mes=int(input())
+
+        # Validamos que el número ingresado esté dentro del rango correcto
+        if Num_mes>0 and Num_mes<=12:
+            # Usamos una estructura if-elif-else para mostrar el nombre del mes correspondiente
+            if Num_mes==1:
+                print ("ENERO")
+            elif Num_mes==2:
+                print ("FEBRERO")
+            elif Num_mes==3:
+                print ("MARZO")
+            elif Num_mes==4:
+                print ("ABRIL")
+            elif Num_mes==5:
+                print ("MAYO")
+            elif Num_mes==6:
+                print ("JUNIO")
+            elif Num_mes==7:
+                print ("JULIO")
+            elif Num_mes==8:
+                print ("AGOSTO")
+            elif Num_mes==9:
+                print ("SEPTIEMBRE")
+            elif Num_mes==10:
+                print ("OCTUBRE")
+            elif Num_mes==11:
+                print ("NOVIEMBRE")
+            elif Num_mes==12:
+                print ("DICIEMBRE")
+        else:
+                print ("Número de mes incorrecto")
+
+    # Si el usuario elige la opción 2, ejecutamos el código correspondiente y mostramos los primeros 10 números de la serie de Fibonacci
+    elif opcion == "2":
+        print("Ha seleccionado la opción 2")
+
+        # Inicializamos las variables para la serie de Fibonacci
+        A=0
+        B=1
+        C=1
+        Count=1
+
+        # Creamos un bucle while que se ejecutará 10 veces y mostrará los números de la serie de Fibonacci
+        while Count<11:
+            print (C, end=",")
+            A=B
+            B=C
+            C=A+B
+            Count+=1
+
+        # Agregamos un salto de línea después de la serie Fibonacci para que se vea mejor en la pantalla
+        print()
+
+    # Si el usuario elige la opción "salir", salimos del programa
+    elif opcion == "3":
+        print("Saliendo del programa...")
+        # Agregamos un salto de línea para que el programa se vea mejor en la pantalla
+        print()
+    # Si el usuario elige una opción inválida, mostramos un mensaje de error
+    else:
+        print("Opción inválida. Por favor, seleccione una opción válida.")
+    # Agregamos un salto de línea para que el programa se vea mejor en la pantalla
+        print()
